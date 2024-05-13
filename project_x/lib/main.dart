@@ -1,14 +1,26 @@
 import 'package:flutter/material.dart';
 import 'phoneotp.dart'; // Importing the phone OTP file
+import 'restaurantlist.dart';
 
 void main() {
   runApp(
-    MaterialApp(
-      home: FrontPage(),
-    ),
+    MyApp(),
   );
 }
 
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Restaurant App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: restaurantlist(),
+    );
+  }
+}
+/*
 class FrontPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -70,3 +82,4 @@ class FrontPage extends StatelessWidget {
     );
   }
 }
+*/

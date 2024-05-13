@@ -1,0 +1,102 @@
+[
+  {
+    "Id": 1,
+    "Name": "Restaurant ABC",
+    "rating": 4.5
+  },
+  {
+    "Id": 2,
+    "Name": "Restaurant XYZ",
+    "rating": 4.2
+  },
+  {
+    "Id": 3,
+    "Name": "Restaurant The Spicy Spoon",
+    "rating": 4.8
+  },
+  {
+    "Id": 4,
+    "Name": "Restaurant Urban Tadka",
+    "rating": 4.1
+  },
+  {
+    "Id": 5,
+    "Name": "Restaurant Curry Delight",
+    "rating": 4.6
+  },
+  {
+    "Id": 6,
+    "Name": "Restaurant Little Italy",
+    "rating": 4.4
+  },
+  {
+    "Id": 7,
+    "Name": "Restaurant The Noodle House",
+    "rating": 4.3
+  },
+  {
+    "Id": 8,
+    "Name": "Restaurant Ocean Breeze",
+    "rating": 4.7
+  },
+  {
+    "Id": 9,
+    "Name": "Restaurant Grill & Chill",
+    "rating": 4.5
+  },
+  {
+    "Id": 10,
+    "Name": "Restaurant The Herb Garden",
+    "rating": 4.8
+  },
+  {
+    "Id": 11,
+    "Name": "Restaurant Tandoori Palace",
+    "rating": 4.2
+  },
+  {
+    "Id": 12,
+    "Name": "Restaurant Sushi World",
+    "rating": 4.9
+  },
+  {
+    "Id": 13,
+    "Name": "Restaurant Fiesta Mexicana",
+    "rating": 4.0
+  },
+  {
+    "Id": 14,
+    "Name": "Restaurant BBQ Nation",
+    "rating": 4.6
+  },
+  {
+    "Id": 15,
+    "Name": "Restaurant Steakhouse Supreme",
+    "rating": 4.3
+  },
+  {
+    "Id": 16,
+    "Name": "Restaurant Veggie Delight",
+    "rating": 4.7
+  },
+  {
+    "Id": 17,
+    "Name": "Restaurant Mediterranean Feast",
+    "rating": 4.4
+  },
+  {
+    "Id": 18,
+    "Name": "Restaurant The Rustic Grill",
+    "rating": 4.1
+  },
+  {
+    "Id": 19,
+    "Name": "Restaurant The Pasta House",
+    "rating": 4.2
+  },
+  {
+    "Id": 20,
+    "Name": "Restaurant Continental Corner",
+    "rating": 4.9
+  }
+]
