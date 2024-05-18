@@ -1,3 +1,16 @@
- Steps <br>
--[Install flutter](https://docs.flutter.dev/get-started/install)<br>
--[Install AndroidStudio](https://developer.android.com/studio?gad_source=1&gclid=CjwKCAjwouexBhAuEiwAtW_Zxy5VPRaFMt8Ui-lyN5OY6vsvqdAOxLXDXj2qAsyG36QRnoHA-bBFVhoCGTYQAvD_BwE&gclsrc=aw.ds#:~:text=Android%20Studio%20downloads)
+# project_x
+
+A new Flutter project.
+
+## Getting Started
+
+This project is a starting point for a Flutter application.
+
+A few resources to get you started if this is your first Flutter project:
+
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.

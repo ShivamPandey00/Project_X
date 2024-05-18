@@ -2,15 +2,16 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:http/http.dart'as http;
-
+import 'package:http/http.dart' as http;
 
 Future<List<Restaurants>> fetchRestaurants() async {
   //final responce=await http.get(Uri.parse('api'));
   final String response = await rootBundle.loadString('assets/restaurant.json');
   // if(responce.statusCode==200) {
-    List jsonResponse = jsonDecode(response);
-    return jsonResponse.map((restaurant) => Restaurants.fromJson(restaurant)).toList();
+  List jsonResponse = jsonDecode(response);
+  return jsonResponse
+      .map((restaurant) => Restaurants.fromJson(restaurant))
+      .toList();
   // } else {
   //   throw Exception('Error: Failed to loasd');
   // }
@@ -18,6 +19,7 @@ Future<List<Restaurants>> fetchRestaurants() async {
 //     HttpHeaders.authorizationHeader: 'Basic your_api_token_here',
 // },
 }
+
 class Restaurants {
   final int Id;
   final String Name;
@@ -27,23 +29,24 @@ class Restaurants {
     required this.Id,
     required this.Name,
     required this.rating,
-});
+  });
   factory Restaurants.fromJson(Map<String, dynamic> json) {
     return switch (json) {
       {
-      'Id': int Id,
-      'Name': String Name,
-      'rating': double rating,
+        'Id': int Id,
+        'Name': String Name,
+        'rating': double rating,
       } =>
-          Restaurants(
-            Id: Id,
-            Name: Name,
-            rating: rating,
-          ),
+        Restaurants(
+          Id: Id,
+          Name: Name,
+          rating: rating,
+        ),
       _ => throw const FormatException('Failed to load album.'),
     };
   }
 }
+
 class restaurantlist extends StatefulWidget {
   const restaurantlist({super.key});
 
@@ -56,8 +59,9 @@ class _restaurantlistState extends State<restaurantlist> {
   @override
   void initState() {
     super.initState();
-    futureRestaurant=fetchRestaurants();
+    futureRestaurant = fetchRestaurants();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,22 +72,26 @@ class _restaurantlistState extends State<restaurantlist> {
         child: FutureBuilder<List<Restaurants>>(
           future: futureRestaurant,
           builder: (context, snapshot) {
-            if(snapshot.hasData) {
-              final restaurants= snapshot.data!;
+            if (snapshot.hasData) {
+              final restaurants = snapshot.data!;
               return ListView.builder(
                   itemCount: restaurants.length,
                   itemBuilder: (context, index) {
-                    final restaurant=restaurants[index];
+                    final restaurant = restaurants[index];
                     return ListTile(
                       title: Text(restaurant.Name),
                       subtitle: Text('${restaurant.rating}'),
-                      onTap: (){
+                      onTap: () {
                         //api to call the restaurant detail
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => restaurantdetails()),
+                        );
                       },
                     );
-                  }
-              );
-            } else if(snapshot.hasError) {
+                  });
+            } else if (snapshot.hasError) {
               return Text('${snapshot.error}');
             }
             return const CircularProgressIndicator();
@@ -93,4 +101,3 @@ class _restaurantlistState extends State<restaurantlist> {
     );
   }
 }
-
